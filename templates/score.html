@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <link rel="stylesheet" href="/static/style4.css">
+</head>
+<body>
+    <h2>Score</h2>
+    <p>Your Scores:</p>
+    {% for user, score in user_scores.items() %}
+        <p>{{ user }}: {{ score }}</p>
+    {% endfor %}
+
+    <p>Your Answers:</p>
+    {% for index, answers in user_answers.items() %}
+        <p>Question {{ index + 1 }} - Your Answer: {{ answers.user_answer }}, Correct Answer: {{ answers.correct_answer }}</p>
+    {% endfor %}
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

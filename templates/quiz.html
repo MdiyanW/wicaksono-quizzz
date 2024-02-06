@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/static/style2.css">
+</head>
+<body>
+    <h2>Quiz</h2>
+    <form action="/quiz" method="post">
+        <h3>{{ quiz_data[question_index].question }}</h3>
+        {% for option in quiz_data[question_index].options %}
+            <input type="radio" id="{{ option }}" name="answer" value="{{ option }}">
+            <label for="{{ option }}">{{ option }}</label><br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

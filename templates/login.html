@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ static_url_path }}/style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            text-align: center;
+            width: 300px;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        <form method="POST" action="/login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

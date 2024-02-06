@@ -1,0 +1,36 @@
+/* style1.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+a {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #45a049;
+}
